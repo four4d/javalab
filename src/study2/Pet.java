@@ -83,7 +83,12 @@ public class Pet extends Animal{
     }
     
     public void setWeight(double newWeight){
-        weight = newWeight;
+        if (newWeight < 0) {
+            System.out.println("Error: negative weight.");
+            System.exit(0);;
+        } else {
+            weight = newWeight;
+        }
     }
     
     public String getName(){
